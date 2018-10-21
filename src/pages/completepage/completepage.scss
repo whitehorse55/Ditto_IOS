@@ -1,0 +1,86 @@
+page-completepage {
+    .content{
+        background-image: url('../assets/img/back_blur.png');
+        background-size: cover; 
+
+        .list{
+            margin-top: 45vh;
+            background: transparent;
+            
+            ion-item {
+                height: 40px;
+                border-radius: 20px !important;
+                padding-left: 5px !important;
+                font-size: 0.9em;
+                width: 80vw;
+                margin-left: 10vw;
+                margin-right: 10vw;
+                margin-bottom: 10px;
+                border: 1px solid #ffffff;
+                border-bottom: 0px !important;
+                box-shadow: none !important;
+                // background-color: gray;
+                .textarea{
+                  padding-left: 0px;
+                }
+              }
+
+            ion-input{
+          padding-left: 10px;
+          width: 100%;
+          margin-left: 0px;
+          color : black;
+        }
+
+        .item-inner {
+          height: 40px;
+        }
+
+
+        ion-list, ion-row, ion-col, .signup-col{
+          background-color: transparent;
+        }
+
+        ion-label{
+          margin-left: 10px;
+          color : black;
+          text-align: center;
+        }
+
+        .countrycode{
+          width: 30px;
+          text-align: left;
+        }
+
+        ion-icon {
+          font-size: 20px; //Preferred size here
+      }
+
+      ion-select{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        max-width: 70%;
+      }
+
+            .btn_done {
+                position: fixed;
+                align-items: center;
+                text-align: center;
+                border-width: 1px;
+                border-color: #ec9922;
+                border-style: solid;
+                text-align: center;
+                margin-left: 25vw;
+                margin-right: 25vw;
+                width: 50vw;
+                height: 50px;
+
+                color: white;
+              }
+        }
+        
+    }
+}

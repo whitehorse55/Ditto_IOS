@@ -1,0 +1,181 @@
+yelp {
+
+
+    ion-card-header{
+        margin: 0 !important;
+        padding: 0 !important;
+
+        .place_image{
+     
+          position: relative;
+          width: 100%;
+          height:40vh;
+          background-color: $empty_color;
+          display: flex;
+          align-items: center;
+  
+          .invite_friend{
+
+            background: $chatroom-meeting-message;
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #f1f1f1;
+
+            p{
+              display: inline-block;
+              width: 80%;
+              margin-top: 10px;
+              margin-left: map-get($padding , twenty);
+              font-size: 14pt;
+              color: $chatroom-message;
+            }
+  
+            ion-icon{
+              display: inline-block;
+              width: 10%;
+              margin-top: 10px;
+              font-size: 30px;
+              color: $chatroom-message;
+              text-align: right
+            }
+  
+          }
+          
+          .nonempty{
+            background-size: cover !important;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-color: transparent;
+            margin-left: auto;
+            margin-right: auto;
+            width:100%;
+            height: 100%;
+          } 
+  
+          .empty{
+            background-size: cover !important;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-color: transparent;
+            margin-left: auto;
+            margin-right: auto;
+            width:170px;
+            height: 130px;
+          }
+
+
+        }
+      }
+    
+    ion-card-content {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        .city{
+            margin-left: map-get($padding , twenty);
+            color: $font-card ;        
+        }
+
+        ion-item{
+          padding : 0px !important;
+          p{
+              margin-left: map-get($padding , twenty);
+              color: $font-card ;
+          }
+        }
+         .part_name{
+          width: 70%;
+          display: inline-block;
+          vertical-align: middle;
+          p{
+            margin-left: map-get($padding, twenty);
+            white-space: normal;
+            font-weight: bold;
+            font-size: 15px;
+            color: black;
+          }
+         }
+  
+         .part_rating{
+          width: 60%;
+          display: inline-block;
+          vertical-align: middle;
+          img{
+            width: 80%;
+            display: inline-block;
+            margin-left:  map-get($padding , twenty);
+            vertical-align: middle; 
+          }
+  
+          p{
+            width: 20%;
+            display: inline-block;
+            margin-left: map-get($padding , twenty);
+            color: $font-card ;
+          }
+  
+         }
+  
+         .part_reviews{
+          width: 40%;
+          display: inline-block;
+          vertical-align: middle;
+          p{
+            margin-left: 10px;
+            color: $font-card ;
+            font-size: 12pt;
+          }
+         }
+  
+         .part_price{
+          width: 20%;
+          text-align: left;
+          display: inline-block;
+          vertical-align: middle;
+          p{
+            margin-left: map-get($padding , twenty);
+            color: $font-card ;
+            font-size: 12pt;
+          }
+         }
+         .part_address
+         {
+          width: 80%;
+          text-align: left;
+          display: inline-block;
+          vertical-align: middle;
+          p{
+            margin-left: 10px;
+            color: $font-card ;
+            font-size: 11pt;
+          }
+         }
+  
+         .part_more{
+           width: 30%;
+           display: inline-block;
+           vertical-align: middle;
+          button{
+            background: transparent;
+            border-color: $button_settime;
+            color: gray;
+          }
+        }
+        
+        
+        
+       
+        h3{
+          width: 70%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          margin-top: 10px;
+          color: gray;
+          min-height: 30px;
+        }   
+      }
+}

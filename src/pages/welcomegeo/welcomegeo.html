@@ -1,0 +1,39 @@
+<!--
+  Generated template for the WelcomegeoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding class="content">
+    <ion-card class="card" overflow-scroll="true">
+      <ion-card-title>
+          <p>First , Tell Us What your interests Are.</p>
+      </ion-card-title>
+
+      <ion-card-content text-center overflow-scroll="true" style="overflow: inherit;" [style.height.vh]="70">
+          <ion-list>
+              <ion-list-header>
+                <ion-input item-left placeholder="Zip code..." (ionChange)="inputZipcode()" [(ngModel)]="geoCredential.code"></ion-input>
+                <button item-right [disabled]="geoCredential.isMylocation" ion-button (click)="getcurrentpos()">
+                  <ion-icon  color="primary" icon-only icon-start ios="ios-navigate" md="md-navigate" large></ion-icon>
+                   <p>My location</p>
+                </button>
+              </ion-list-header>
+
+              <!-- <ion-item>
+                  <img item-left src="assets/img/everything.png">
+                  <ion-label>everything</ion-label>
+                  <ion-checkbox color="dark" item-right (ionChange)="onchangeEverythingStatus(everycheck)" [(ngModel)]="everycheck"></ion-checkbox>
+              </ion-item> -->
+
+              <ion-item *ngFor="let item of place_array; let i = index" >
+                <img item-left src="assets/img/{{item.placeurl}}">
+                <ion-label>{{item.placename}}</ion-label>
+                <ion-checkbox [disabled]="everycheck" color="dark" item-right (ionChange)="onchangeStatus(item,i)" [(ngModel)]="item.ischecked"></ion-checkbox>
+              </ion-item>
+
+          </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <button class="btn_ok"  (click)="onclickOkbutton()" ion-button>  OK, Let me in  </button>
+</ion-content>

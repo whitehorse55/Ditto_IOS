@@ -1,0 +1,23 @@
+<ion-content>
+
+    <ion-slides class="myslide" #slider pager="true">
+ 
+        <ion-slide>
+            <img src="assets/img/walkthrough1.png" />
+            <button class="btn_skip" ion-button clear full (click)="onclickskipbutton()">SKIP</button>
+        </ion-slide>
+          
+        <ion-slide>
+          <img src="assets/img/walkthrough2.png" />
+          <button class="btn_skip" ion-button clear full (click)="onclickskipbutton()">SKIP</button>
+        </ion-slide>
+
+          
+        <ion-slide>
+            <img src="assets/img/walkthrough3.png" />
+            <button color="signupbutton" class="btn_ok" ion-button   round full (click)="onclickskipbutton()">OK</button>
+        </ion-slide>
+
+    </ion-slides>    
+
+</ion-content>

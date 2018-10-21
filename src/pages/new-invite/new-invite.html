@@ -1,0 +1,44 @@
+<!--
+  Generated template for the NewInvitePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header> 
+  <ion-toolbar text-center>
+    <ion-title>Choose Recipient(s)</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div *ngIf="searching" class="spinner-container">
+    <ion-spinner name="bubbles">Loading</ion-spinner>
+  </div>
+
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()" class="searchbar" placeholder="Search by username...">
+
+  </ion-searchbar>
+
+  
+  <ion-item-group class="list">
+     
+    <ng-container *ngIf="searchTerm == ''">
+      <groupitem *ngIf="groupListArray.length > 0" [data]="groupListArray" [title]="'Group'" (onClickCheckBox)="onclickGroupCheckbox($event,'group')"></groupitem>
+    </ng-container>
+
+    <inviteitem *ngIf="onlineArray.length > 0" [data]="onlineArray" [title]="'Online'" (onClickCheckBox)="onclickCheckbox($event,'online')"></inviteitem>
+    <inviteitem *ngIf="phoneContactArray.length > 0" [data]="phoneContactArray" [title]="'PhoneContact'" (onClickCheckBox)="onclickCheckbox($event,'phone')"></inviteitem>
+
+    <ng-container *ngIf="searchTerm != ''">
+        <inviteitem [data]="otherListArray"  [title]="'Other'"  (onClickCheckBox)="onclickCheckbox($event,'other')"></inviteitem>
+    </ng-container>
+
+  </ion-item-group>  
+</ion-content>
+
+<ion-footer align="center" no-border>
+  <button class="botttom_button" (click)="onclicknextbutton()" ion-button>
+    Next
+  </button>
+</ion-footer>

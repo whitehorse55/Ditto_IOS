@@ -1,0 +1,21 @@
+<ion-card  class="card_content">
+
+    <img *ngIf="!data.easybutton" src="{{data.img}}">
+    <img *ngIf="data.easybutton" class="easy_img" src="assets/img/welcome_place.png">
+
+    <ion-card-content>
+          <ion-card-title>
+           {{data.title}}
+          </ion-card-title>
+        <p>
+            {{data.description}}
+        </p>
+
+        <button *ngIf="data.welcomebutton" ion-button (click)="btnClick('welcome')">{{data.welcomebutton}}</button>
+        <button *ngIf="data.easybutton" ion-button (click)="btnClick('easy')">{{data.easybutton}}</button>
+        <button *ngIf="data.firstbutton" ion-button (click)="btnClick('invite')">{{data.firstbutton}}</button>
+        <button *ngIf="data.secondbutton" class="btn_second" ion-button (click)="btnClick('skip')">{{data.secondbutton}}</button>
+
+    </ion-card-content>
+
+</ion-card>

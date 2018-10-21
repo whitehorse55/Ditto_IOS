@@ -1,0 +1,23 @@
+<ion-item  class="item" (click)="onclickitem('isnottime')" [style.opacity]="mydata.ismeetingdatay? 0.7 : 1.0 ">
+  <ion-avatar item-left>
+    <img class="profile" src="{{mydata.userimage}}">
+    <img  *ngIf="mydata.ismeetingdatay" class="status_online" src="assets/img/checked.png">
+
+    <img  *ngIf="!mydata.ismeetingdatay && mydata.userstatus" class="status_offline" src="assets/img/circle_online.png">
+    <img  *ngIf="!mydata.ismeetingdatay && !mydata.userstatus" class="status_offline" src="assets/img/circle.png">
+  </ion-avatar>
+
+  <h2>{{mydata.username}}</h2>
+
+  <h6 *ngIf="!mydata.ismeetingdatay && mydata.lastmessage == '' " >{{mydata.userplace_name}} and {{mydata.userplace_number}} other </h6>
+  <h6 *ngIf="!mydata.ismeetingdatay && mydata.lastmessage != '' " >{{mydata.lastmessage }}</h6>
+  <h6 *ngIf="mydata.ismeetingdatay" >{{mydata.ismeetingdate | date : 'MMM d, y h:mm a'}} at {{mydata.userplace_name}}</h6>
+
+  <p *ngIf="!mydata.ismeetingdatay">Tap to say some thing</p>
+  <p *ngIf="mydata.ismeetingdatay">Tap for details</p>
+
+  <!-- <img class="place"  src="assets/img/cafes.png" (click)="onclickitem('istime'); $event.stopPropagation();" item-right> -->
+  <img class="place" *ngIf="mydata.userplace_image" src="{{mydata.userplace_image}}" (click)="onclickitem('istime'); $event.stopPropagation();" item-end>
+
+</ion-item>
+<div class="divider"></div>

@@ -1,0 +1,64 @@
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content fullscreen class="content">
+
+  <ion-slides #slider pager="true"  (ionSlideWillChange)="onSlideChanged()">
+ 
+    <ion-slide class="myslide1">
+      </ion-slide>
+      
+      <ion-slide class="myslide2">
+      </ion-slide>
+  
+    <ion-slide class="main">
+  
+        <!-- ////////////////////DITTO title -->
+   <div class="top_title">
+   </div>
+ 
+   <!-- Get Connected title -->
+   <div class="center_title">
+   </div>
+ 
+   <!-- Create account button -->
+   <div class="create_account" (click)="onclickCreateAccount()">
+     <button  full class="btn_login" ion-button clear>CREATE AN ACCOUNT</button>
+   </div>
+ 
+   <!-- Login button -->
+   <div class="login" (click)="onclickLogin()">
+     <button full class="btn_login" ion-button clear>LOG IN</button>
+   </div>
+ 
+   <div class="social_login">
+       <button class="btn" ion-button style="background-image: url(assets/img/facebook.png);" (click)="onclickFacebook()"></button>
+       <button class="btn" ion-button style="background-image: url(assets/img/google.png);" (click)="onclickGoogle()"></button>
+   </div>
+ 
+   <div class="terms">
+     <p>By creating an account or signing in,you agree to  
+       <!-- <a href="http://www.dittochat.com/terms">terms of use</a> & <a href="http://www.dittochat.com/privacy"> privacy policy</a> -->
+       <a class="button" (click)="onclickterms('terms')"> our terms of use & </a>  <a class="button" (click)="onclickterms('privacy')"> privacy policy</a>
+     </p>
+   </div>
+   <!--
+   <div class="login" (click)="verify('123')">
+       <button ion-button clear>LOG IN</button>
+   </div> -->
+  
+    </ion-slide>
+
+ 
+      
+  </ion-slides>
+
+  
+
+</ion-content>

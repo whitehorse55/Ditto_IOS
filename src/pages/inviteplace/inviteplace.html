@@ -1,0 +1,66 @@
+<!--
+  Generated template for the InviteplacePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar text-center>
+
+
+    <ion-title color="blackcolor" >
+     <p style="color: black; font-size: 20px;">Invite Friend</p> 
+    </ion-title>
+
+    <ion-buttons right>
+      <button color="blackcolor" ion-button icon-only (click)="onclickDonebutton()">
+          Done
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="content">
+    <div class="top_image">
+      <img src="{{passdata.place_photo}}"/>
+      <div class="title">
+        <p>{{passdata.place_name}}</p>
+      </div>
+    </div>
+
+    <div *ngIf="searching" class="spinner-container">
+      <ion-spinner name="bubbles">Loading</ion-spinner>
+    </div>
+  
+    <!--searchbar -->
+    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()" class="searchbar" placeholder="Search by username...">
+  
+    </ion-searchbar>
+  
+    
+    <ion-item-group class="list">
+       
+      <ng-container *ngIf="searchTerm == ''">
+        <groupitem *ngIf="groupListArray.length > 0" [data]="groupListArray" [title]="'Group'" (onClickCheckBox)="onclickGroupCheckbox($event,'group')"></groupitem>
+      </ng-container>
+
+      <inviteitem *ngIf="onlineArray.length > 0" [data]="onlineArray" [title]="'Online'" (onClickCheckBox)="onclickCheckbox($event,'online')"></inviteitem>
+      <inviteitem *ngIf="phoneContactArray.length > 0" [data]="phoneContactArray" [title]="'PhoneContact'" (onClickCheckBox)="onclickCheckbox($event,'phone')"></inviteitem>
+
+      <ng-container *ngIf="searchTerm != ''">
+          <inviteitem [data]="otherListArray"  [title]="'Other'"  (onClickCheckBox)="onclickCheckbox($event,'other')"></inviteitem>
+      </ng-container>
+
+    </ion-item-group>   
+
+</ion-content>
+
+<ion-footer align="center" no-border>
+    <button class="botttom_button" (click)="onclickSendbutton()" ion-button>
+      Send
+    </button>
+</ion-footer>

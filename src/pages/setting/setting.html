@@ -1,0 +1,50 @@
+
+<ion-header>
+  <custommenubar [data]="data_menubar"></custommenubar>
+</ion-header>
+
+<ion-content class="content">
+
+  <ion-item no-lines>
+
+    <div item-left>
+      <p style="font-weight: bold; font-size: 16pt;">{{myinfos.username}}</p>
+      <p style="color : #22242a;font-size: 12pt;">{{myinfos.email}}</p>
+    </div>
+
+    <img item-right src="{{myinfos.photoUrl}}">
+
+  </ion-item>
+
+  <ion-item no-lines class="top_item" (click)="onclickitem('fr')">
+    <p>My Friends</p>
+  </ion-item>
+
+  <ion-item no-lines (click)="onclickitem('re')">
+    <p>Requests</p>
+  </ion-item>
+
+  <ion-item no-lines (click)="onclickitem('fi')">
+    <p>Find & Invite Friends</p>
+  </ion-item>
+
+  <ion-item no-lines (click)="onclickitem('in')">
+    <p>Choose interests and location</p>
+  </ion-item>
+
+  <ion-item no-lines (click)="onclickitem('block')">
+    <p>Blcked Users</p>
+  </ion-item>
+
+  <ion-item no-lines (click)="onclickitem('private')">
+
+    <div item-left>
+      <p>Private Account</p>
+    </div>
+
+    <ion-toggle style="width : 50px;" item-right [(ngModel)]="isToggle" (ionChange)="updateItem($event)"></ion-toggle>
+  </ion-item>
+
+  <button class="btn_logout" (click)="onclickLogout()" ion-button>Log Out</button>
+
+</ion-content>

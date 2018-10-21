@@ -1,0 +1,149 @@
+<ion-header>
+  <ion-toolbar text-center>
+
+    <ion-buttons left menuToggle>
+      <button color="textcolor" ion-button icon-only (click)="onclickbackbutton()">
+        <!-- <img src="assets/img/setting.png"> -->
+        <ion-icon color="divider" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title color="blackcolor">
+      <p style="color: black; font-size: 20px;">{{passdata.username}}</p>
+    </ion-title>
+
+    <ion-buttons right>
+      <button color="textcolor" ion-button icon-only (click)="onclickuserimage()">
+        <ion-avatar *ngIf="passdata.userimage != ''">
+          <img style="width: 30px; height: 30px; border-radius: 15px;" src="{{passdata.userimage}}">
+        </ion-avatar>
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+  <div class="places">
+    <content scroll="true">
+      <ion-scroll scrollX="true" direction="x">
+        <div class="image_blocks" *ngFor="let item of (userPlaces | sort)">
+          <img *ngIf="item.placeimage" src="{{item.placeimage}}">
+          <img *ngIf="item.placephoto" src="{{item.placephoto}}">
+
+          <div>
+            <p *ngIf="item.placedisprice" [style.margin.px]="0">{{item.placename}}</p>
+            <p *ngIf="!item.placedisprice">{{item.placename}}</p>
+
+            <div *ngIf="item.placedisprice" class="price">
+              <p style="margin-top: 5px;">{{item.placeprice}}</p>
+
+              <span style="margin-top: 5px;">
+                <span>{{item.placedisprice}}</span>
+              </span>
+            </div>
+
+          </div>
+
+          <button *ngIf="item.placeprice" style="color:white;" (click)="onclickgroupbutton(item.placeurl)" color="groupon_buy"
+            ion-button round> GET DEAL</button>
+          <button ion-button round outline (click)="onclicksettimebutton(item)"> set a time</button>
+        </div>
+      </ion-scroll>
+    </content>
+  </div>
+
+</ion-header>
+
+<ion-content #content (click)="onclickContent()">
+
+  <div class="chatwindow">
+    <ion-list no-lines>
+      <ion-item text-wrap *ngFor="let item of (messagesArray | sort); let i = index">
+        
+        <ion-avatar item-left *ngIf="item.sender != myinfo.id">
+          <img  src="{{passdata.userimage}}">
+        </ion-avatar>
+
+        <div no-lines class="bubble me" *ngIf="item.type != 'meeting'   && item.sender != myinfo.id">
+          <span class="triangle"></span>
+          <p (tap)="onclickmessage(item)">{{item.message}}</p>
+          <!-- <div class="msg-time">{{item.timeofmsg}} {{item.dateofmsg}}</div> -->
+        </div>
+
+        <div no-lines class="bubble meeting_me" *ngIf="item.type == 'meeting' && item.sender != myinfo.id">
+            <span class="triangle"></span>
+
+            <div class="meeting_back">
+              <img *ngIf="item.message" src="{{item.placename}}" />
+              <img *ngIf="!item.message" src="assets/img/group.png" />
+              <div class="msg-time">
+                <p>{{item.message}}</p>
+                <p>{{item.timeofmsg | date : 'MMM d, y h:mm a'}}</p>
+              </div>
+            </div>
+
+            <!--  1 : 1 chat -->
+            <!-- accpt meeting -->
+            <div *ngIf="!item.accept" col-12 class="button_group">
+              <div>
+                <img src="assets/img/meeting_cancel.png" (tap)="onclickcancelbutton(item)">
+              </div>
+
+              <div>
+                <img src="assets/img/meeting_accept.png" (tap)="onclickAcceptbutton(item)">
+              </div>
+
+            </div>
+
+            <!-- not accept meeting -->
+            <div *ngIf="item.accept" col-12 class="button_group" (click)="gotoDetailPage(item);$event.stopPropagation();">
+              <div>
+                <img src="assets/img/checked.png">
+              </div>
+
+              <div>
+                More Detail
+              </div>
+
+            </div>
+
+        </div>
+
+        <div no-lines class="bubble you" *ngIf="item.type != 'meeting' && item.sender == myinfo.id">
+          <span class="triangle"></span>
+          <p (tap)="onclickmessage(item)">{{item.message}}</p>
+        </div>
+
+        <div no-lines class="bubble meeting_you" *ngIf="item.type == 'meeting' && item.sender == myinfo.id">
+          <span class="triangle"></span>
+          <div class="meeting_back">
+            <img *ngIf="item.message" src="{{item.placename}}" />
+            <img *ngIf="!item.message" src="assets/img/group.png" />
+            <div class="msg-time">
+              <p>{{item.message}}</p>
+              <p>{{item.timeofmsg | date : 'MMM d, y h:mm a'}}</p>
+            </div>
+          </div>
+
+          <!-- not accept meeting -->
+          <div col-12 class="button_group" (click)="gotoDetailPage(item); $event.stopPropagation();">
+            <div><img src="assets/img/checked.png"> </div>
+            <div>More Detail</div>
+          </div>
+
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>
+
+<ion-footer no-border [style.height.px]="keyboardHeight">
+  <div class="input-wrap">
+    <ion-input autocorrect="on" autocomplete="on" #chat_input placeholder="Type a message" [(ngModel)]="message"
+      (keyup.enter)="onclickSendButton()" (focus)="onFocus()">
+    </ion-input>
+    <button ion-button clear icon-only item-right (click)="onclickSendButton()">
+      <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
+    </button>
+  </div>
+</ion-footer>

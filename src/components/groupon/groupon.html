@@ -1,0 +1,67 @@
+  <ion-card-header (click)="onclickItems('group_placeimage')">
+    <div *ngIf="place.place_photo == ''" class="place_image">
+      <img class="empty" src="assets/img/empty_place.png">
+      <div  (click)="onclickItems('group_invite')" class="invite_friend">
+          <p> Invite Friend </p>
+          <ion-icon  name="arrow-forward"></ion-icon>
+      </div>
+    </div>
+  
+    <div *ngIf="place.place_photo != ''" class="place_image">
+      <img class="nonempty" src="{{place.place_photo}}">
+      <div  (click)="onclickItems('group_invite'); $event.stopPropagation();" class="invite_friend">
+          <p> Invite Friend </p>
+          <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </div>
+  
+  
+  </ion-card-header>
+  
+  <ion-card-content>
+  
+  
+    <div style="height: 15vh;" class="div_top">
+      <div class="part_top">
+          <div class="part_name">
+              <p>{{place.place_name}}</p>
+            </div>
+        
+            <div class="part_more">
+              <button (click)="onclickItems('group_placeimage')" ion-button clear>
+                <img src="assets/img/groupon.png">
+              </button>
+            </div>      
+      </div>
+
+      <div style="height: 8vh;" class="part_top_1">
+          <p class="part_title">{{place.place_title}}</p>
+      </div>
+     
+    </div> 
+
+  
+    <ion-item style="height: 10vh;" style="padding-top: 0 !important;" no-padding>
+  
+      <div class="part_location">
+            <div class="part_distance">
+                <p *ngIf="distance" >{{distance}}mi away &nbsp; {{place.place_redelocation}}</p>     
+            </div>
+
+            <div class="part_price">
+                <p>{{place.place_price}}</p>
+               <span>
+                  <span>{{place.place_discount_price}}</span>
+               </span>
+                
+            </div>
+      </div>
+
+      <div class="btn_buy">
+        <button (click)="onclickItems('group_placeimage')" class="buy_button" ion-button color="groupon_buy">Buy</button>
+      </div>
+  
+    </ion-item>
+  
+  
+  </ion-card-content>

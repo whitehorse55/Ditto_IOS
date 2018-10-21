@@ -1,0 +1,45 @@
+page-walkthrough {
+    .myslide{
+        margin: 0 !important;
+        padding:  0 !important;
+
+        width: 100%;
+        height: 100%;
+
+        ion-slide{
+            width: 100%;
+            height: 100%;
+            
+            img{
+                position: absolute;
+                left : 5vw;
+                right: 5vw;
+                background-size: cover;
+                width: 90vw;
+                height: 70vh;
+                bottom: 0;
+            }
+
+            .btn_skip{
+                position: absolute;
+                top: 30px;
+                right: 0px;
+                width: 100px;
+                height: 40px;
+                font-weight: bold;
+                color: black;
+            }
+
+            .btn_ok{
+                position: absolute;
+                bottom: 30px;
+                width: 50vw;
+                height: 40px;
+                left: 25vw;
+                right: 25vw;
+                font-weight: bold;
+                color: white;
+            }
+        }
+    }   
+}

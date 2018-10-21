@@ -1,0 +1,23 @@
+<ion-item-divider *ngIf="itemtitle == 'Group' && itemArray.length > 0">
+  <ion-label>{{itemtitle}}</ion-label>
+</ion-item-divider>
+<ion-item class="groupitem" (click)="onclickItem(item); $event.stopPropagation();" *ngFor="let item of itemArray; let i = index;">
+
+  <div item-left>
+    <ng-container *ngFor="let info of item.member ; let j = index;">
+      <img *ngIf="j < 4 && info.image != '' " src="{{info.image}}">
+      <img *ngIf="j < 4 && info.image == '' " src="assets/img/user.png">
+    </ng-container>
+  </div>
+
+  <ion-label *ngIf="itemtitle == 'Group'">{{generateNameString(item)}}</ion-label>
+  <ion-checkbox *ngIf="itemtitle == 'Group'" [(ngModel)]="item.isChecked" item-right (click)="onclickcheckbox(item)" mode="ios"></ion-checkbox>
+
+  <h2 *ngIf="itemtitle != 'Group'">{{generateNameString(item)}}</h2>
+  <h6 *ngIf="itemtitle != 'Group'">{{generatePlaceString(item)}}</h6>
+  <p *ngIf="itemtitle != 'Group'">Tap to say some thing</p>
+  <img *ngIf="itemtitle != 'Group'" class="place" src="{{item.places[item.places.length - 1].placephoto}}" item-end>
+
+</ion-item>
+
+<div class="divider"></div>

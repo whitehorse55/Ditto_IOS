@@ -1,0 +1,114 @@
+page-welcome {
+  
+  ion-toolbar{
+    height: toolbar-height;
+  }
+  ion-buttons button{
+    img{
+      width: 20px;
+      height: 20px;
+    }
+    
+  }
+  .content {
+    //////////////////iphone x statusbar fit ///////////
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+
+    .toolbar-background-ios {
+      background: white;
+      height: 70px;
+    }
+
+    .spinner-container {
+      margin-top: 80px;
+      width: 100%;
+      text-align: center;
+      // padding: 10px;
+
+      ion-spinner {
+        * {
+          width: 28px;
+          height: 28px;
+          stroke: black;
+          fill: black;
+        }
+
+        &.spinner-circles circle,
+        &.spinner-bubbles circle,
+        &.spinner-dots circle {
+          fill: black;
+        }
+      }
+    }
+
+    .searchbar {
+      padding: 0px;
+      // margin-top: 56px;
+    }
+
+    .scroll-content {
+      overflow-y: auto;
+    }
+
+    .list {
+      position: absolute;
+      width: 100%;
+      padding: 0px;
+      margin-top: 10px;
+      max-height: 70%;
+      margin-bottom: 40px;
+
+      p,
+      img {
+        // text-align: center;
+        vertical-align: middle;
+      }
+
+      p {
+        margin-left: 10px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 15px;
+        color: black;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+      }
+
+      ion-row {
+        justify-content: center;
+        align-items: center;
+      }
+
+      ion-col button {
+        height: 30px;
+        border-radius: 15px;
+      }
+
+      ion-item .item-inner {
+        padding-right: 0px;
+        height: 70px;
+      }
+
+      ion-item {
+        border-radius: 1px;
+        border: 1px solid map-get($colors, divider);
+      }
+    }
+  }
+
+  .botttom_button {
+    margin-bottom: 20px;
+    width: 60%;
+    height: 40px;
+    background-color: map-get($colors, welcomebutton);
+    font-size: 15pt;
+    border-radius: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}

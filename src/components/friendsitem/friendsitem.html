@@ -1,0 +1,12 @@
+<ion-item  no-lines class="item">
+    <ion-avatar item-start>
+      <img class="profile" src="{{friendInfo.photoUrl}}">
+    </ion-avatar>
+
+    <h2>{{friendInfo.username}}</h2>
+
+    <button *ngIf="cateogry_type == 'request'"  ion-button class="place_request" item-right (click)="clickacceptbutton()">Accept</button>
+    <button *ngIf="cateogry_type == 'block'"  ion-button class="place_myfriends" item-right (click)="clickacceptbutton()">UnBlock</button>
+    <button *ngIf="cateogry_type == 'myfriends'"  ion-button class="place_myfriends" item-right (click)="clickacceptbutton()">Remove</button>
+</ion-item>
+<div class="border"></div>

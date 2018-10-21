@@ -1,0 +1,85 @@
+<ion-content class="content">
+
+ 
+
+     <div class="top_images">
+        <ion-slides *ngIf="detail_info.photos && detail_info.photos.length" #slider pager="true"  (ionSlideWillChange)="onSlideChanged()">
+          <ion-slide *ngFor="let slide of detail_info.photos" class="slide-background">
+            <button color="extralight" clear full class="back_button" ion-button (click)="onclickBackbutton()">
+              <ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+            </button> 
+            <img src="{{slide}}"/>
+          </ion-slide>
+        </ion-slides>
+     </div>
+
+     <div>
+        <ion-list>
+            <ion-item>
+                <div class="part_name">
+                  <p>{{detail_info.name}} </p>
+                </div>
+      
+                <div class="part_more">
+                  <button (click)="onclickyelpbutton(detail_info.url)" ion-button clear>
+                    <img src="assets/img/logo_yelp.png"/>
+                  </button>
+                </div>
+              </ion-item>
+      
+              <ion-item>
+      
+                <div class="part_rating">
+                    <!-- <rating [(ngModel)]="detail_info.rating" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half"
+                    starIconName="star" nullable="false"></rating> -->
+                    <img  *ngIf="detail_info.rating == 0" src="assets/img/regular_0.png">
+                    <img  *ngIf="detail_info.rating < 1" src="assets/img/regular_1.png">
+                    <img  *ngIf="detail_info.rating > 1.5 && detail_info.rating < 2" src="assets/img/regular_1_half.png">
+                    <img  *ngIf="detail_info.rating == 2" src="assets/img/regular_2.png">
+                    <img  *ngIf="detail_info.rating > 2 && detail_info.rating < 3" src="assets/img/regular_2_half.png">
+                    <img  *ngIf="detail_info.rating == 3" src="assets/img/regular_3.png">
+                    <img  *ngIf="detail_info.rating > 3 && detail_info.rating < 4" src="assets/img/regular_3_half.png">
+                    <img  *ngIf="detail_info.rating == 4" src="assets/img/regular_4.png">
+                    <img  *ngIf="detail_info.rating > 4 && detail_info.rating < 5" src="assets/img/regular_4_half.png">
+                    <img  *ngIf="detail_info.rating == 5" src="assets/img/regular_5.png">
+                </div>
+      
+                <div class="part_reviews">
+                  <p>{{detail_info.review_count}} reviews</p>
+                </div>
+      
+              </ion-item>
+      
+              <ion-item>
+      
+                <div class="part_price">
+                  <p>{{detail_info.price}}</p>
+                </div>
+      
+                <div class="part_address">
+                    <p style="display: inline-block;">{{detail_category | removecommand}} </p>
+                    <p>{{detail_city}}</p>
+                </div>
+      
+              </ion-item>
+
+              <ion-item>
+                  <p class="font_bold">Address</p>
+                  <p *ngFor="let myaddress of detail_address" class="font_address">{{myaddress}}</p>
+              </ion-item>
+
+              
+              <ion-item>
+                  <p class="font_bold">phone</p>
+                  <p class="font_address">{{detail_info.phone}}</p>
+              </ion-item>
+
+              <ion-item>
+                <p class="font_bold">More</p>
+                <p (click)="onclickyelpbutton(detail_info.url)" class="font_address">view more on Yelp</p>
+              </ion-item>
+        </ion-list>
+     </div>
+
+
+</ion-content>

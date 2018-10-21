@@ -1,0 +1,26 @@
+<div class="matched" *ngIf="isValid == true">
+
+  <div class="title">
+    <p>{{mydata.title}}</p>
+    <p>{{mydata.names}} like "{{mydata.placeinfo.place_name}}"</p>
+  </div>
+
+  <div class="photos">
+    <content scroll="true">
+      <ion-scroll scrollX="true" direction="x">
+        <div class="image_blocks" *ngFor="let item of mydata.photos">
+            <img src="{{item}}">
+        </div>
+      </ion-scroll>
+    </content>
+  </div>
+
+  <div class="resturnt_image">
+      <img src="{{mydata.placeinfo.place_photo}}">
+  </div>
+
+  <div class="button_group">
+      <button ion-button (click)="onclickButton('chat')" >{{mydata.buttontitle1}}</button>
+      <button ion-button (click)="onclickButton('back')">{{mydata.buttontitle2}}</button>
+  </div>
+</div>

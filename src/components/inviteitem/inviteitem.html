@@ -1,0 +1,7 @@
+<ion-item-divider *ngIf="itemArray.length > 0"> <ion-label>{{itemtitle}}</ion-label></ion-item-divider>
+<ion-item  *ngFor="let item of itemArray; let i = index;">
+  <img item-left item-start  *ngIf="item.image != '' " src="{{item.image}}">
+  <img item-left item-start *ngIf="item.image == ''" src="assets/img/user.png">
+  <ion-label>{{item.displayName}}</ion-label>
+  <ion-checkbox [(ngModel)]="item.isChecked" (click)="onclickcheckbox(item)" mode = "ios" item-right></ion-checkbox>
+</ion-item>

@@ -1,0 +1,23 @@
+<ion-content class="content">
+    <ion-list class="list">
+      
+    <ion-item>
+        <ion-label  class="countrycode"><ion-icon item-start ios="ios-planet" md="md-planet"></ion-icon></ion-label>
+
+        <ion-select [(ngModel)]="registerCredentials.countrycode" name="countrycode" (ionChange)="onSelectChange($event)">
+            <ion-option *ngFor="let item of countryList" value="{{item.dial_code}}" >
+                ( {{item.dial_code}} ) {{item.name}}
+            </ion-option>
+        </ion-select>
+    </ion-item>
+      
+
+      <ion-item>
+        <ion-label> <ion-icon ios="ios-phone-portrait" md="md-phone-portrait"></ion-icon></ion-label>
+        <ion-input placeholder="phonenumber" class="textarea"   type="tel"  name="phonenumber" required [(ngModel)]="registerCredentials.phonenumber"></ion-input>
+    </ion-item>
+        
+      <button (click)="signupWithFacebook()" class="btn_done" full clear ion-button>Done</button>
+
+    </ion-list>
+</ion-content>

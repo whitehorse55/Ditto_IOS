@@ -1,0 +1,53 @@
+page-welcomegeo {
+    .content{
+        background-image: url('../assets/img/back_blur.png');
+        background-size: cover;
+
+        .card{
+            margin-top: 5vh;
+            overflow-y: inherit;
+        }
+
+        ion-card-title{
+            p{
+                color: map-get($colors,blackcolor);
+                font-size: 13pt;
+                margin-top: 10px;
+                margin-right: 10px;
+                margin-left: 10px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+
+      
+        ion-list {
+            button{
+                background-color: transparent;
+                p{
+                    margin-left: 10px;
+                    color : map-get($colors , primary);
+                }
+            }
+            
+            ion-item img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+        
+  
+
+        .btn_ok{
+            background-color: map-get($colors ,welcomebutton) !important;
+            width: 200px;
+            height: 40px;
+            border-radius: 20px;
+            display: block !important;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;
+        }
+   
+    }
+}

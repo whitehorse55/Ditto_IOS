@@ -1,0 +1,33 @@
+emptychat {
+    
+    .empty_photo{
+        margin: 0 auto;
+        margin-top: 50%;
+        width: 80px;
+        height: 80px;
+    }
+
+    .empty_text p{
+        margin: 0 auto;
+        margin-top: 20px;
+        color: map-get($colors ,dark);
+        text-align: center;
+        width: 75%;
+        font-size: 15px;
+    }
+
+    .btn_find {
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 30px;
+        
+        button{
+            border-radius: 25px;
+            height: 50px;
+            font-weight: bold;
+            background-color: map-get($colors , welcomebutton);
+        }
+        
+    }
+
+}

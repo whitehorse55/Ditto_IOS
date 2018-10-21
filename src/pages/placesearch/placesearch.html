@@ -1,0 +1,36 @@
+<ion-header *ngIf="isSwipeStatus">
+  <custommenubar [data]="data_menubar"></custommenubar>
+</ion-header>
+
+
+<ion-content class="content">
+
+  <searchbar *ngIf="isSwipeStatus" color='primary' [passarray]="places"  [temparray]="places_temp"  (onChangeSearchValue)="onchangeSearch($event)" ></searchbar>
+
+    <!-- turtoial part -->
+    <div *ngIf="isSwipeStatus == false" class="top_title">
+        <img src="assets/img/main_title.png">
+    </div>
+
+  <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwout)="onThrowOut($event)" (throwoutleft)="voteUp(false, 'swipe')"
+    (throwoutright)="voteUp(true, 'swipe')" id="card-stack">
+    <ion-card #mycards1 swing-card *ngFor="let place of places; let i = index" class="td-card">
+      <yelp *ngIf="place.place_rating" [places]="place" [index] = "i"   (onClickComponent)="onclickitems($event)"></yelp>
+      <groupon *ngIf="place.place_title" [places]="place" [index] = "i" (onClickComponent)="onclickitems($event)"></groupon>
+
+      <ion-item  no-padding class="tinder-footer">
+        
+        <div item-left id="swipe_dislike" class="rate" (click)="voteUp(false, place)"></div>
+        <div item-right id="swipe_like" class="rate" (click)="voteUp(true, place)"></div>
+      </ion-item>
+
+      <div *ngIf="isSwipeStatus == false" class="mask">
+        <img src="assets/img/mask.png" (click)="onclickmaskView(i)" >
+      </div>
+
+    </ion-card>
+  </div>
+
+
+
+</ion-content>

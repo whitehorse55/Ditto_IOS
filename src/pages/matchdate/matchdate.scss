@@ -1,0 +1,95 @@
+page-matchdate {
+
+    .scroll-content
+    {
+        background-color: white;
+    }
+    
+    .content{
+        background-color: white;
+        border-radius: 10px;
+        background: linear-gradient(to bottom,  rgb(240, 240, 239) 20%, #fff 80%);
+        align-items: center;
+        text-align: center;
+
+        ion-item{
+            
+            p{
+                text-align: center;
+                color: gray;
+                b{
+                    color: $matchdate_font_color;
+                }
+            }
+
+            ion-avatar{
+                display: inline-block;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        .place_image
+        {
+            position: relative;
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 90%;
+            height: 40vh;
+            vertical-align: middle;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+            border-radius: 5px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+            }
+
+            div{
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 50px;
+                width: 100%;
+                background: $chatroom-meeting-message;
+                color: #f1f1f1;
+                p{
+                    margin-top: 15px;
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+                    color: #f1f1f1;
+                }
+    
+            }
+                    
+        }
+
+        button{
+            margin-top: 5vh;
+            width: 80%;
+            background-color: map-get($colors, signupbutton);
+            font-weight: bold;
+            font-size: 18px;
+            color: map-get($colors, textcolor);
+            border-radius: 25px;
+            height: 50px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+        }
+
+        ion-item:first-child{
+            margin-top: 10%;
+            text-align: center;
+            
+            p{
+                text-align: center;
+                font-weight: bold;
+                color : $matchdate_font_color;
+                font-size: 20pt;
+            }
+        }
+    }
+}

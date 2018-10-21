@@ -1,0 +1,71 @@
+<ion-card-header (click)="onclickItems('placeimage')">
+  <div *ngIf="place.place_photo == ''" class="place_image">
+    <img class="empty" src="assets/img/empty_place.png">
+    <div  (click)="onclickItems('invite')" class="invite_friend">
+        <p> Invite Friend </p>
+        <ion-icon  name="arrow-forward"></ion-icon>
+    </div>
+  </div>
+
+  <div *ngIf="place.place_photo != ''" class="place_image">
+    <img class="nonempty" src="{{place.place_photo}}">
+    <div  (click)="onclickItems('invite'); $event.stopPropagation();" class="invite_friend">
+        <p> Invite Friend </p>
+        <ion-icon name="arrow-forward"></ion-icon>
+    </div>
+  </div>
+
+
+</ion-card-header>
+
+<ion-card-content>
+
+  <ion-item no-padding>
+    <div class="part_name">
+      <p>{{ place.place_name}}</p>
+    </div>
+
+    <div class="part_more">
+      <button (click)="onclickItems('yelp')" ion-button clear>
+        <img src="assets/img/logo_yelp.png">
+      </button>
+    </div>
+  </ion-item>
+
+  <ion-item style="height: 3vh;" no-padding>
+
+    <div class="part_rating">
+
+      <img *ngIf="place.place_rating == 0" src="assets/img/regular_0.png">
+      <img *ngIf="place.place_rating < 1" src="assets/img/regular_1.png">
+      <img *ngIf="place.place_rating > 1.5 && place.place_rating < 2" src="assets/img/regular_1_half.png">
+      <img *ngIf="place.place_rating == 2" src="assets/img/regular_2.png">
+      <img *ngIf="place.place_rating > 2 && place.place_rating < 3" src="assets/img/regular_2_half.png">
+      <img *ngIf="place.place_rating == 3" src="assets/img/regular_3.png">
+      <img *ngIf="place.place_rating > 3 && place.place_rating < 4" src="assets/img/regular_3_half.png">
+      <img *ngIf="place.place_rating == 4" src="assets/img/regular_4.png">
+      <img *ngIf="place.place_rating > 4 && place.place_rating < 5" src="assets/img/regular_4_half.png">
+      <img *ngIf="place.place_rating == 5" src="assets/img/regular_5.png">
+    </div>
+
+    <div class="part_reviews">
+      <p>{{place.place_reviews}} reviews</p>
+    </div>
+
+  </ion-item>
+
+  <ion-item no-padding>
+
+    <div class="part_price">
+      <p>{{place.place_price}}</p>
+    </div>
+
+    <div class="part_address">
+      <p style="display: inline-block;">{{placeCategoryString}}</p>
+    </div>
+
+    <p class="city">{{place.place_city}}</p>
+
+  </ion-item>
+
+</ion-card-content>

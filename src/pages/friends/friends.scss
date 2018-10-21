@@ -1,0 +1,45 @@
+page-friends {
+    ion-toolbar {
+        button {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .content{
+
+        ion-list{
+          .item item-block item-md
+          {
+              align-items: center;
+          }
+        }
+
+        .spinner-container {
+          margin-top: 80px;
+          width: 100%;
+          text-align: center;
+          // padding: 10px;
+    
+          ion-spinner {
+            * {
+              width: 28px;
+              height: 28px;
+              stroke: black;
+              fill: black;
+            }
+    
+            &.spinner-circles circle,
+            &.spinner-bubbles circle,
+            &.spinner-dots circle {
+              fill: black;
+            }
+          }
+        }
+    
+        .searchbar {
+          padding: 0px;
+          // margin-top: 80px;
+        }
+      }
+}

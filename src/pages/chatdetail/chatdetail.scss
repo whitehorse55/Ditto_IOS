@@ -1,0 +1,80 @@
+page-chatdetail {
+    .top_image {
+        position: relative;
+        width: 100%;
+        height: 30vh;
+        img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .title {
+            position: absolute;
+            background: $chatroom-meeting-message;
+            width: 100%;
+            height: 50px;
+            align-items: center;
+            bottom: 0;
+            left: 0;
+            p {
+                width: 100%;
+                height: 100%;
+                margin-top: 15px;
+                color: white;
+                margin-left: 10px;
+                font-size: 10pt;
+            }
+        }
+    }
+    ion-toolbar {
+        height: toolbar-height;
+    }
+    ion-buttons button {
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .content {
+        //////////////////iphone x statusbar fit ///////////
+        padding-top: constant(safe-area-inset-top);
+        padding-top: env(safe-area-inset-top);
+    
+        .toolbar-background-ios {
+          background: white;
+          height: 70px;
+        }
+    
+    
+        .scroll-content {
+          overflow-y: auto;
+        }
+    
+        .list {
+          position: absolute;
+          width: 100%;
+          padding: 0px;
+          max-height: 70%;
+          margin-bottom: 40px;
+          align-items: center;
+          vertical-align: middle;
+    
+        }
+
+      }
+    
+
+      .botttom_button {
+        margin-bottom: 20px;
+        width: 60%;
+        height: 40px;
+        background-color: map-get($colors, welcomebutton);
+        font-size: 15pt;
+        border-radius: 20px;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+
+}

@@ -1,0 +1,206 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       rgb(94, 89, 89),
+  textcolor : #fbfbfb,
+  signupbutton : #59b689,
+  welcomebutton :#46b58c,
+  divider :   #abafad,
+  blackcolor : black,
+  mainbgcolor : rgb(21,22,26),
+  extralight: #fff,
+  facebook:   #3b5998,
+  twitter:    #429cd6,
+  gmail:      #df4b37,
+  bg  :       #f1f4f5,
+  lightbg  :  #f8f8f8,
+  notificationbg : #cfe0fc,
+  bordercolor: rgba(183, 183, 183, 0.39),
+  dislike_button : rgb(225,151,143),
+  groupon_buy : rgb(83,162, 25)
+);
+
+/////////////////alert related variable//////////////////
+$alert-md-background-color : #3b3d3c;
+$alert-ios-background : #3b3d3c;
+$alert-wp-background : #3b3d3c;
+
+$font-dark :  #3b3d3c;
+$font-grid : #abafad;
+$font-card :rgb(159 ,159 ,159);
+
+$chatroom-font : #59b689;
+$chatroom-offline :#e6c082;
+$chatroom-friend : rgb(21 ,27 ,28);
+$chatroom-meeting : rgb(68,68,68);
+$chatroom-message : rgb(236, 235, 239);
+$chatroom-meeting-message : rgba(0, 0, 0, 0.5);
+
+$matchdate_font_color : rgb(71,75, 78);
+$matchdate_font_color1 : rgb(111,117, 117);
+
+$setting_background : rgb(247,247,247);
+$logout_button : rgb(225,151,143);
+
+$dislike_button : rgb(215,117,107);
+$like_button : rgb(89,182,137);
+$empty_color : rgb(241,241,241);
+$button_settime : rgb(236,153, 34);
+
+$groupon_buy : rgb(83,162, 25);
+
+$main_searchbaar : rgba(255,255, 255 ,0.14);
+$invite_group : rgb(144,144, 150);
+
+
+// $toolbar-ios-height : 70px;
+// $toolbar-md-height : 70px;
+
+$inviataion_detail_background : rgb(247,247,247);
+
+
+
+@import "./mixin";
+
+
+$font: (
+  big:          2.3rem,
+  extramedium:  1.9rem,
+  largemedium:  1.6rem,
+  medium:       1.5rem,
+  small:        1.5rem,
+  bitsmall:     1.4rem,
+  smallbtn:     1.3rem,
+);
+
+//margin
+
+$margin: (
+  big:      32px,
+  medium:   16px,
+  small:    8px,
+  bitsmall: 4px,
+);
+
+//padding
+
+$padding: (
+  sixteen: 16px,
+  eighteen: 8px,
+  fifth : 5px,
+  twenty : 20px
+);
+
+
+$height:(
+  btnheight: 4rem,
+  roundbtn:  5rem,
+  propic:  20rem,
+  smallbtn: 3rem,
+  large:    7rem,
+);
+
+
+$width:(
+  logo: 14rem,
+  roundbtn:  5rem,
+  propic:  20rem,
+  btnwidth: 4rem,
+);
+
+$radius: (
+  big:      8px,
+  medium:   4px,
+  small:    2px,
+);
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+$white:      #FFF;
+$black:      #000;
+$black-41:   #414141;
+$red:        #FF0000;
+$grey-c8:    #C8C7CC;
+$grey:       #999;
+$grey-f8:    #F8F8F8;
+$grey-dc:    #DCDCDC;
+$blue-72:    #72CBFF;
+$blue:       #387EF5;
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

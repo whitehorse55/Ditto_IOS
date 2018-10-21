@@ -1,0 +1,55 @@
+inviteitem {
+
+    
+    ion-item-divider {
+        margin-top: 10px;
+        ion-label{
+          color: $invite_group;              
+        }
+    }
+
+    ion-label,
+    img {
+      // text-align: center;
+      vertical-align: middle;
+    }
+
+    ion-item .item-inner {
+        padding-right: 0px;
+        height: 70px;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+      }
+
+    ion-item {
+        border-radius: 1px;
+        border-bottom: 0.5px groove map-get($colors, divider);
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+     
+            
+        ion-label {
+            margin-left: 10px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 15px;
+            color: black;
+            width: 85%;
+        }
+
+        ion-checkbox{
+            button.item-cover{
+                width: 15%;
+                color:$chatroom-font;
+            }
+        }
+    }
+
+
+}
+

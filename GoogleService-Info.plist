@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>352885934650-gk4ccfs8bdvh4mhnqrn6u2fdp1hna64k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.352885934650-gk4ccfs8bdvh4mhnqrn6u2fdp1hna64k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBMYsqO4v1AunB2ldssEaqcTu7qtpON9o0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>352885934650</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.dittochat.ditto</string>
+	<key>PROJECT_ID</key>
+	<string>ditto-206401</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ditto-206401.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:352885934650:ios:e99d94f73aad4b51</string>
+	<key>DATABASE_URL</key>
+	<string>https://ditto-206401.firebaseio.com</string>
+	<key>ADMOB_APP_ID</key>
+	<string>ca-app-pub-6863402298027651~9172353028</string>
+</dict>
+</plist>

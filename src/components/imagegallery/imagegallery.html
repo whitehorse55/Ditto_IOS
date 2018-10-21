@@ -1,0 +1,2 @@
+<img style="border-radius : 5px;" *ngIf="base64Image == ''" (click)="presentActionSheet()" item-end src="assets/img/photogallery.png">
+<img style="border-radius : 5px;" *ngIf="base64Image != ''" (click)="presentActionSheet()" item-end src="data:image/jpg;base64,{{base64Image}}">

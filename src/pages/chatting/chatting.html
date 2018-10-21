@@ -1,0 +1,13 @@
+
+<ion-header>
+  <custommenubar [data]="data_menubar"></custommenubar>
+</ion-header>
+
+<ion-content class="content">
+
+  <emptychat *ngIf="isloadedView && invitedUserArray.length == 0" (onclickMenubar)="onclickbutton($event)"></emptychat>
+  <ion-list>
+    <groupitem *ngIf="groupArray.length > 0" [data]="groupArray" [title]="'chat'" (onClickItems)="onclickGroupItem($event)" ></groupitem>
+    <chatitem *ngFor="let item of invitedUserArray; let i = index;" [index]="i" [data]="item" (onclickItem)="onclickItems($event)" ></chatitem>
+  </ion-list>
+</ion-content>

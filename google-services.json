@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "352885934650",
+    "firebase_url": "https://ditto-206401.firebaseio.com",
+    "project_id": "ditto-206401",
+    "storage_bucket": "ditto-206401.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352885934650:android:e99d94f73aad4b51",
+        "android_client_info": {
+          "package_name": "com.dittochat.ditto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352885934650-12038fdgu2prkcmafke6dm7f7gtljktr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dittochat.ditto",
+            "certificate_hash": "9f845a6e648a75f224c394c967a07d2c5ac3e966"
+          }
+        },
+        {
+          "client_id": "352885934650-71su8m83nr30mumfrabljvjv9kcvsgo7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dittochat.ditto",
+            "certificate_hash": "0a64e752ebe9094a15706bd08ba0cc37bf48378b"
+          }
+        },
+        {
+          "client_id": "352885934650-idnbn6mp51hbpjbjagh4ir6lljgo5n37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOCeRui44D5NkSh0-sXVDMbkxtSK25ANw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352885934650-abuqf3k5gm43uhpgesie13m4c7v6gc4j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "352885934650-gk4ccfs8bdvh4mhnqrn6u2fdp1hna64k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dittochat.ditto"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-6863402298027651~7575775296"
+    }
+  ],
+  "configuration_version": "1"
+}

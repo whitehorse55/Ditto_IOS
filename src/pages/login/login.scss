@@ -1,0 +1,223 @@
+page-login {
+
+  .content{
+    background-color: black;
+  }
+  
+  .scroll-content{
+    background-color: black;
+  }
+  // background: url('../assets/img/back.png');
+  // background-size: cover;
+  .scroll-content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+
+  ion-slides{
+    height: 100%;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: transparent;  
+    
+    .myslide1{
+      padding: 0 !important;
+      margin: 0 !important;
+      background: url('../assets/img/slider1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-color: transparent;
+      width: 100%;
+      height : 100%;      
+    }
+
+    .myslide2{
+      background: url('../assets/img/slider2.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-color: transparent;  
+      width: 100%;
+      height : 100%;
+      
+    }
+
+  }
+
+     
+
+  // .swiper-slide {
+  //   background-size: cover !important;
+  //   background-position: center !important;
+  // }
+  .swiper-pagination-bullet {
+    background-color: white;
+  }
+
+  .main {
+    width: 100%;
+    height: 100%;
+    background: url('../assets/img/back.png');
+    background-size: cover;
+  }
+
+  .top_title {
+    background: url('../assets/img/group2.png');
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 40vw;
+    height: 60px;
+    text-align: center;
+    top: 5vh;
+    margin-left: 35vw;
+    text-align: center;
+   
+  }
+
+  /////////////////////center title css property
+  .center_title {
+    background: url('../assets/img/group3.png');
+    width: 100%;
+    height: 70px;
+    margin-left: 10vw;
+    position: fixed;
+    top: 15vh;
+    background-repeat: no-repeat;
+  }
+
+  .terms {
+    text-align: center;
+    position: fixed;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    bottom: 15vh;
+    width: 90vw;
+    height: 50px;
+    color: white;
+
+    a {
+      color: map-get($colors, lightbg);
+    }
+  }
+
+  .social_login {
+    text-align: center;
+    position: fixed;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    bottom: 20vh;
+    width: 90vw;
+    height: 50px;
+    color: white;
+
+    .btn {
+      display: inline-block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 48%;
+      height: 80%;
+    }
+  }
+
+  ////////////////////////login button//////////////////////
+  .login {
+    text-align: center;
+    position: fixed;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    bottom: 30vh;
+    width: 90vw;
+    height: 50px;
+    .btn_login {
+      border-width: 1px;
+      color: white;
+      font-weight: bold;
+      border-color: #ec9922;
+      border-style: solid;
+    }
+  }
+
+  ///////////////////////create_account////////////////////////
+  .create_account {
+    text-align: center;
+    position: fixed;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    bottom: 40vh;
+    width: 90vw;
+    height: 50px;
+    color: white;
+    .btn_login {
+      border-width: 1px;
+      font-weight: bold;
+      border-color: #ec9922;
+      border-style: solid;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+////////////////////////////////custom alert controller////////////////
+.alert-md .alert-title {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.alert-md .alert-sub-title {
+  font-size: 18px;
+  color: #fff;
+}
+
+.alert-md .alert-message {
+  font-size: 15px;
+  color: #fff;
+}
+
+.alert-md .alert-button .button-inner {
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  color: white;
+}
+
+.alert-md .alert-input {
+  margin: 5px 0;
+  border-bottom: 1px solid #dedede;
+  color: white;
+}
+
+button.alert-button-group {
+  width: 33.33%;
+}
+
+.alert-button-group .button-inner {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.alert-button-group-vertical {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.alert-md .alert-wrapper {
+  margin-top: 30%;
+  align-content: center;
+  border-radius: 10px;
+  max-width: 280px;
+  background-color: #3b3d3c;
+  -webkit-box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,60 @@
+<ion-header>
+
+    <ion-toolbar text-center>
+  
+  
+      <ion-title color="blackcolor" >
+       <p style="color: black; font-size: 20px;">{{passdata.message}}</p> 
+      </ion-title>
+  
+      <ion-buttons right>
+        <button color="blackcolor" ion-button icon-only (click)="onclickDonebutton()">
+            Done
+        </button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+  
+  </ion-header>
+
+
+  <ion-content class="content">
+      <div class="top_image">
+        <img src="{{passdata.placename}}"/>
+        <div class="title">
+          <p>{{passdata.timeofmsg |  date : 'MMM d, y h:mm a'}}</p>
+        </div>
+      </div>
+  
+      <ion-list class="list">
+        <ion-item-divider > <ion-label>Invited</ion-label></ion-item-divider>
+        <ng-container *ngIf="type == 'group'">
+            <ion-item *ngFor="let item of passdata.acceptUsers" >
+                <ion-avatar item-left>
+                    <img style="width: 50px; height: 50px;"  src="{{item.photourl}}">
+                </ion-avatar>
+                
+                <div>
+                    <p style="color : black;">{{item.username}}</p>
+                </div>
+                
+            </ion-item>
+        </ng-container>
+        
+        <ng-container *ngIf="type != 'group'">
+            <ion-item  *ngFor="let items of userArray">
+                <ion-avatar   item-left>
+                    <img style="width: 50px; height: 50px;" src="{{items.imagearray}}">
+                </ion-avatar>
+                
+                <div>
+                    <p style="color : black;">{{items.username}}</p>
+                </div>
+                
+            </ion-item>
+        </ng-container>
+          
+      </ion-list>   
+  
+  </ion-content>
+  

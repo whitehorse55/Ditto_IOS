@@ -1,0 +1,19 @@
+<ion-toolbar text-center color="extralight" >
+  <!-- <ion-buttons left menuToggle>
+      <button color="textcolor" ion-button icon-only (click)="onclickButtons('setting')">
+          <img src="assets/img/setting.png">
+      </button>
+  </ion-buttons> -->
+
+  <ion-title>
+    <img *ngIf="data.title == '' "  src="assets/img/group5.png" style="width: 100px;">
+    <ion-label *ngIf="data.title != '' ">{{data.title}}</ion-label>
+  </ion-title>
+
+  <!-- <ion-buttons right>
+      <button color="textcolor" ion-button icon-only (click)="onclickButtons('chat')">
+       <img src="assets/img/chat.png">
+      </button>
+  </ion-buttons> -->
+
+</ion-toolbar>
